@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer System Components Diagram</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: 300;
+        }
+        
+        .diagram-container {
+            padding: 40px;
+            background: #f8f9fa;
+        }
+        
+        .component {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            border-left: 4px solid #3498db;
+        }
+        
+        .component:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        
+        .component h3 {
+            color: #2c3e50;
+            margin-top: 0;
+            font-size: 1.3em;
+        }
+        
+        .component p {
+            color: #666;
+            margin-bottom: 0;
+            line-height: 1.6;
+        }
+        
+        .system-overview {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .connections {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            margin-top: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .connection-flow {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 20px 0;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border: 2px solid #e9ecef;
+        }
+        
+        .flow-item {
+            flex: 1;
+            text-align: center;
+            padding: 10px;
+            background: #3498db;
+            color: white;
+            border-radius: 5px;
+            margin: 0 10px;
+            font-weight: 500;
+        }
+        
+        .arrow {
+            font-size: 1.5em;
+            color: #3498db;
+            font-weight: bold;
+        }
+        
+        .cpu { border-left-color: #e74c3c; }
+        .memory { border-left-color: #f39c12; }
+        .storage { border-left-color: #27ae60; }
+        .motherboard { border-left-color: #9b59b6; }
+        .peripherals { border-left-color: #34495e; }
+        .power { border-left-color: #e67e22; }
+        
+        .interactive-note {
+            background: linear-gradient(135deg, #74b9ff, #0984e3);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+            text-align: center;
+        }
+        
+        .component-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        @media (max-width: 768px) {
+            .connection-flow {
+                flex-direction: column;
+            }
+            
+            .flow-item {
+                margin: 5px 0;
+            }
+            
+            .arrow {
+                transform: rotate(90deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Computer System Components Diagram</h1>
+            <p>Understanding How Main Components Connect and Interact</p>
+        </div>
+        
+        <div class="diagram-container">
+            <div class="system-overview">
+                <div class="component motherboard">
+                    <h3>🔌 Motherboard (Main Circuit Board)</h3>
+                    <p>The central hub that connects all components together. Contains slots for CPU, RAM, expansion cards, and connectors for all other components.</p>
+                </div>
+                
+                <div class="component cpu">
+                    <h3>🧠 CPU (Central Processing Unit)</h3>
+                    <p>The "brain" of the computer that executes instructions and performs calculations. Processes data from memory and controls other components.</p>
+                </div>
+            </div>
+            
+            <div class="component-grid">
+                <div class="component memory">
+                    <h3>💾 RAM (Random Access Memory)</h3>
+                    <p>Temporary storage for data and programs currently being used. Provides fast access to information the CPU needs.</p>
+                </div>
+                
+                <div class="component storage">
+                    <h3>💿 Storage Devices</h3>
+                    <p>Permanent storage for data and programs (Hard Drive, SSD). Stores the operating system, applications, and user files.</p>
+                </div>
+                
+                <div class="component power">
+                    <h3>⚡ Power Supply Unit (PSU)</h3>
+                    <p>Converts AC power from the wall outlet to DC power used by computer components. Provides stable power to all parts.</p>
+                </div>
+                
+                <div class="component peripherals">
+                    <h3>🖥️ Input/Output Devices</h3>
+                    <p>Peripherals like monitor, keyboard, mouse, and speakers that allow users to interact with the computer system.</p>
+                </div>
+            </div>
+            
+            <div class="connections">
+                <h2 style="text-align: center; color: #2c3e50; margin-bottom: 30px;">Component Connections & Data Flow</h2>
+                
+                <div class="connection-flow">
+                    <div class="flow-item">CPU</div>
+                    <div class="arrow">↔</div>
+                    <div class="flow-item">RAM</div>
+                    <div class="arrow">↔</div>
+                    <div class="flow-item">Motherboard</div>
+                </div>
+                
+                <div class="connection-flow">
+                    <div class="flow-item">Storage</div>
+                    <div class="arrow">↔</div>
+                    <div class="flow-item">Motherboard</div>
+                    <div class="arrow">↔</div>
+                    <div class="flow-item">CPU</div>
+                </div>
+                
+                <div class="connection-flow">
+                    <div class="flow-item">Input Devices</div>
+                    <div class="arrow">→</div>
+                    <div class="flow-item">CPU</div>
+                    <div class="arrow">→</div>
+                    <div class="flow-item">Output Devices</div>
+                </div>
+                
+                <div class="connection-flow">
+                    <div class="flow-item">Power Supply</div>
+                    <div class="arrow">→</div>
+                    <div class="flow-item">All Components</div>
+                </div>
+            </div>
+            
+            <div class="interactive-note">
+                <h3>How Components Work Together:</h3>
+                <p>1. <strong>Power Supply</strong> provides electricity to all components</p>
+                <p>2. <strong>CPU</strong> fetches instructions from <strong>Storage</strong> and loads them into <strong>RAM</strong></p>
+                <p>3. <strong>CPU</strong> processes data and instructions from <strong>RAM</strong></p>
+                <p>4. Results are sent to <strong>Output devices</strong> or stored back in <strong>Storage</strong></p>
+                <p>5. <strong>Motherboard</strong> facilitates all communication between components</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
